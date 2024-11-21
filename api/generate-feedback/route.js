@@ -68,7 +68,7 @@ export async function generateFeedback(req, res) {
     console.log('Request Payload:', { sanitizedCorrectAnswer, sanitizedUserAnswer });
 
     // Run Python script asynchronously
-    const pythonProcess = spawn('python', ['feedback_model.py', sanitizedCorrectAnswer, sanitizedUserAnswer]);
+    const pythonProcess = spawn('python', ['./feedback_model.py', sanitizedCorrectAnswer, sanitizedUserAnswer]);
 
     let feedback = '';
     pythonProcess.stdout.on('data', (data) => {
