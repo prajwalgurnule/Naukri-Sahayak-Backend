@@ -1,5 +1,5 @@
 # Use an official Node.js runtime as a parent image
-FROM node:16
+FROM node:22
 
 # Install Python (required for feedback_model.py) and related tools
 RUN apt-get update && apt-get install -y python3 python3-pip && apt-get clean
